@@ -43,7 +43,7 @@ $desktop: 1024px;
 
 /* General measures */
 $h-padding: 10px;
-$section-padding: 70px;
+$section-padding: 10px;
 $section-title-padding: 30px;
 $section-title-padding-to-image: 36px;
 $item-spacing: 40px;
@@ -326,6 +326,66 @@ section.freetime {
   }
 }
 
+/*** Section Freetime ***/
+section.encounter {
+  margin-top: 150px;
+  color: rgba(255,255,255,0.9);
+  background-color: #615a47;
+  background-image: url('../img/cover-momo-mobile.png');
+  background-position: 30% 20%;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  p {
+    padding-bottom: 0.5em;
+  }
+  strong {
+    color: #fff;
+  }
+
+  .links {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  background-position: 30% 20%;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  p {
+    padding-bottom: 0.5em;
+  }
+  strong {
+    color: #fff;
+  }
+
+  .links {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+
+  .how {
+    @include span(full);
+    padding-top: $h-padding;
+    margin-bottom: 1em;
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: url('../img/18-09-11_the-other-encounter_106.jpg');
+    background-position: 40% 40%;
+    background-size: cover;
+
+    .how {
+      @include span(5 of 12);
+    }
+    .how-left {
+        @include pre(1);
+    }
+    .how-right {
+        @include post(1);
+    }
+  }
+}
+
 /**** PARTNERSHIPS ****/
 
 .partnerships {
@@ -362,6 +422,20 @@ section.freetime {
 .shortphrase {
   font-weight: normal;
   font-size: $size-medium;
+}
+
+.othershortphrase {
+  max-width: 45em;
+  text-align: left;
+  font-weight: normal;
+  font-size: $size-base;
+}
+
+.acknowledgements {
+  max-width: 45em;
+  text-align: left;
+  font-weight: normal;
+  font-size: $size-base;
 }
 
 /* PROBONO - CHILICORN FUND */
@@ -402,6 +476,21 @@ section.book {
 .book p.shortphrase {
   max-width: 32em;
   margin-top: 0.6em;
+}
+
+/* OTHER ENCOUNTER */
+
+section.otherencounter {
+  .section-header {
+    max-width: 820px;
+  }
+
+  img {
+    max-width: 360px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
 }
 
 /*** SPICE BOOK DOWNLOAD ***/
@@ -667,6 +756,67 @@ section#comments .section-header {
 #comments {
   padding-bottom: 2 * $section-padding;
 }
+
+
+/**** OTHER ENCOUNTER QUOTES ****/
+
+section#othercomments .section-header {
+  padding-bottom: 2em;
+}
+
+.otherquote {
+  @include span(6);
+  margin-bottom: $item-spacing;
+
+  p, blockquote {
+    font-size: $size-base;
+    line-height: 1.2em;
+    text-align: center;
+    margin: auto;
+    max-width: 400px;
+    padding-bottom: 1em;
+    padding-top: 1.2em;
+  }
+
+  blockquote > span {
+    font-size: 3 * $size-medium;
+    font-family: arial;
+    opacity: .3;
+    display: block;
+    float: left;
+    padding-top: $size-base;
+  }
+
+  img {
+    max-width: 75px;
+    margin: auto;
+    display: block;
+    @media screen and (min-width: $mobile) {
+      max-width: 130px;
+    }
+  }
+
+  .name {
+    font-size: $size-base;
+    font-weight: bold;
+    margin-top: 0.2em;
+    color: $gray-text;
+  }
+
+  .role {
+    color: $gray-text-lighter;
+    font-weight: normal;
+  }
+
+  @media screen and (max-width: $mobile) {
+    @include span(full);
+  }
+}
+
+#othercomments {
+  padding-bottom: 2 * $section-padding;
+}
+
 
 /*** CARDS ***/
 .card {
